@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+ <link rel="stylesheet" href="font-1/demo.css">
+
+    <style type="text/css">
+
+        @font-face {font-family: "iconfont";
+          src: url('iconfont.eot'); /* IE9*/
+          src: url('iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('iconfont.woff') format('woff'), /* chrome, firefox */
+          url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+          url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        @font-face {
+			  font-family: 'iconfont';  /* project id 396589 */
+			  src: url('//at.alicdn.com/t/font_396589_60zoedtoma13jtt9.eot');
+			  src: url('//at.alicdn.com/t/font_396589_60zoedtoma13jtt9.eot?#iefix') format('embedded-opentype'),
+			  url('//at.alicdn.com/t/font_396589_60zoedtoma13jtt9.woff') format('woff'),
+			  url('//at.alicdn.com/t/font_396589_60zoedtoma13jtt9.ttf') format('truetype'),
+			  url('//at.alicdn.com/t/font_396589_60zoedtoma13jtt9.svg#iconfont') format('svg');
+		}
+
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+    </style>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		text-decoration: none;
+	}
+	html{
+		
+	}
+	header{
+		width:100%;
+		height:452px;
+		background: url('images/img1.jpg') no-repeat;
+		position: relative
+	}
+	.me-pic{
+		width:25%;
+		height:25%;
+		position: absolute;
+		left:37.5%;
+		top:20%;
+	}
+	.me-pic img{
+		width:100%;
+		height:100%;
+		border-radius: 50%;
+	}
+	.container{
+		position: relative;
+		width:30%;
+		margin:0 auto;
+		padding-top:220px;
+		height: 65px;
+		overflow: hidden;
+		font-size: 18px;
+	}
+	.anim{
+		color:white;
+		width:300%;
+		height:65px;
+		position:absolute;
+	}
+	.anim p{
+		width:33.33333%;
+		float: left;
+		text-align: center;
+		height:65px;
+	}
+	ul.jian{
+		list-style: none;
+		position: absolute;
+		bottom:40px;
+		width:94%;
+		left:3%;
+		margin:0 auto;
+	}
+	.jian li{
+		float: left;
+		width:45%;
+		text-align: center;
+		height:35px;
+		line-height: 35px;
+		border: 1px solid #ccc;
+		border-radius: 5%;
+	}
+	li>a{
+		color:white;
+		font-size: 18px;
+		display: block;
+		width: 100%;
+		text-decoration: none;
+	}
+	li>a:hover{
+		text-decoration: none;
+	}
+	li>a:active{
+		text-decoration: none;
+		background: #aaa;
+	}
+	.it{
+		position: absolute;
+		bottom: 40%;
+		opacity: 0.4;
+	}
+	.it:active{
+		text-decoration: none;
+		background: #aaa;
+	}
+	.it i{
+		font-size:40px;
+		color:white;
+	}
+	.left-icon{
+		left:10%;
+
+	}
+	.right-icon{
+		right:10%;
+	}
+	#imf,#exp,#able,#com{
+		height:350px;
+	}
+	#imf p,#exp p,#able p,#com p{
+		height:40px;
+		background: green;
+		line-height: 40px;
+		color:white;
+		font-weight: bold;
+		font-size: 16px;
+		padding-left:8px;
+	}
+	#imf{
+		width:100%;
+		position: relative;
+		top:-2px;
+		height: 375px;
+		background: #787878;
+		color:#eee;
+	}
+	#imf i{
+		font-size: 42px;
+	}
+	#imf ul{
+		list-style: none;
+		width:50%;
+		float: left;
+		height: 150px;
+		padding-top: 8px;
+	}
+	#imf ul li{
+		margin:0 auto;
+		text-align: center;
+	}
+	#imf .icon-1{
+		width:80px;
+		height:80px;
+		background:#505050;
+		border-radius: 80px;
+		text-align: center;
+		line-height: 80px;
+	}
+	.name{
+		font-size: 18px;
+		font-weight:bold;
+		color:#eee;
+	}
+	#exp{
+		height:430px;
+	}
+	#exp .shen{
+		width:100%;
+	}
+	#exp .shen ul{
+		width:50%;
+		list-style: none;
+		margin:0 auto;
+		overflow: hidden;
+		height:300px;
+		position: relative;
+	}
+	#exp .shen ul li{
+		width:400%;
+		margin:0 auto;
+		position: absolute;
+	}
+	#exp .shen ul li img{
+		width:25%;
+		height:300px;
+		float: left;
+	}
+</style>
+<body>
+	<header>
+		<div class="me-pic"><img src="me.jpg"></div>
+		<div class="container">
+			<div class='anim' id='run' style="left:0%;bottom:0%;">
+				<p>
+					自己选的路 定当勇往直前
+				</p>
+				<p>投我以桃 报之以李</p>
+				<p>学知不足</p>
+			</div>icon
+		</div>	
+		<ul class="jian">
+			<li style="margin-right:8%;margin-bottom: 2%"><a href="#imf">基本资料</a></li>
+			<li><a href="#exp" style="margin-bottom: 2%">项目经验</a></li>
+			<li style="margin-right:8%;"><a href="#able">技术能力</a></li>
+			<li><a href="#com">自我评价</a></li>
+		</ul>
+		<div class="left-icon it"><i class="icon iconfont">&#xe64c;</i></div>
+		<div class="right-icon it"><i class="icon iconfont">&#xe64b;</i></div>
+	</header>
+	<div id='imf'><p>基本资料</p>
+		<ul><li class="icon-1"><i class="icon iconfont">&#xe601;</i></li><li class="name">个人资料</li><li>姓名:彭涛奇 性别:男</li><li>年龄:22 籍贯:湖南</li></ul>
+		<ul><li class="icon-1"><i class="icon iconfont">&#xe6cd;</i></li><li class="name">专业学历</li><li>专业：机械电子工程</li><li>学历：本科</li></ul>
+		<ul><li class="icon-1"><i class="icon iconfont">&#xe61b;</i></li><li class="name">毕业学校</li><li>毕业学校：湖南工程学院</li><li>学习技能：编程</li></ul>
+		<ul><li class="icon-1"><i class="icon iconfont">&#xe620;</i></li><li class="name">联系方式</li><li>qq：18670959615</li><li>邮箱：347586337@qq.com</li></ul>
+	</div>
+	<div id="exp">
+		<p>项目经验</p>
+		<div style="height:40px;line-height: 40px;text-align:center;">项目名称：声气</div>
+		<div class="shen">
+			<ul id='exp1'>
+				<li id='exp2' style="left:0%;top:0">
+					<img src="images/shen1.jpg" alt="">
+					<img src="images/shen2.jpg" alt="">
+					<img src="images/shen3.jpg" alt="">
+					<img src="images/shen4.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+		<div style="height:50px;line-height: 50px;padding-left: 8px;font-size: 18px;color:#333">技术栈：vue + vuex + axio + vue-route</div>
+	</div>
+	<div id="able"><p>技术能力</p></div>
+	<div id="com"><p>自我评价</p></div>
+	<script type="text/javascript">
+		window.onload=function(){
+			//格言轮播图
+			run();
+			function run(){
+				if(len==-200){
+					len=0;
+					anim.style.left=len+'%';
+			 	}else{
+			 		len-=100;
+			 		anim.style.left=len+'%';
+			 	}
+			 	setTimeout(run,3000);	
+			}
+			shen1();
+			function shen1(){
+				if(shen==-300){
+					shen=0;
+					exp2.style.left=shen+'%';
+			 	}else{
+			 		shen-=100;
+			 		exp2.style.left=shen+'%';
+			 	}
+			 	setTimeout(shen1,2000);	
+			}
+		};
+			var left=document.getElementsByClassName('left-icon')[0];
+			var right=document.getElementsByClassName('right-icon')[0];
+			var anim=document.getElementById('run');
+			var exp1=document.getElementById('exp1');
+			var exp2=document.getElementById('exp2');
+			var n=100;
+			var len=anim.style.left.slice(0,-1);
+			var i=100;
+			var shen=exp2.style.left.slice(0,-1);
+			left.onclick=function(){
+				if(len==0){
+					len=-200;
+					anim.style.left=len+'%';
+			 	}else{
+			 		len+=100;
+			 		anim.style.left=len+'%';
+			 	}	
+			 };
+			 right.onclick=function(){
+			 	if(len==-200){
+					len=0;
+					anim.style.left=len+'%';
+			 	}else{
+			 		len-=100;
+			 		anim.style.left=len+'%';
+			 	}	
+			 };
+	</script>
+</body>
+</html>
